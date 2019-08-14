@@ -1,0 +1,106 @@
+<section >
+    <div >
+        <div class="container py-lg-3">
+                <div class="col-md-12 mt-5 mx-auto">
+            <div class="heading text-center">
+                <h3 class="heading mb-sm-5 mb-3 text-uppercase">Register</h3>
+            </div>
+            <div class="contact_grid_right">
+                <form name="form" (ngSubmit)="f.form.valid && register()" #f="ngForm" novalidate>
+                    <div class="contact_left_grid">
+                        <div id="scrollId" style="color: #dc3545;" [innerHTML]="htmlStr">
+                        </div>
+                        <div class="form-group">
+                                <input type="text" class="form-control" name="uname" id="uname" placeholder="Your Username" [(ngModel)]="credentials.uname" #uname="ngModel" [ngClass]="{ 'is-invalid': f.submitted && uname.invalid }" required >
+                                <div *ngIf="f.submitted && uname.invalid" class="invalid-feedback">
+                                    <div *ngIf="uname.errors.required">User Name is required</div>
+                                </div>
+                        </div>
+                        <div class="form-group">
+                                <input type="text" class="form-control" name="name" placeholder="Your Full name" [(ngModel)]="credentials.name" #name="ngModel" [ngClass]="{ 'is-invalid': f.submitted && name.invalid }" required>
+                                <div *ngIf="f.submitted && name.invalid" class="invalid-feedback">
+                                    <div *ngIf="name.errors.required">Full Name is required</div>
+                                </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <input type="email" class="form-control" name="email" placeholder="Your Email" [(ngModel)]="credentials.email" #email="ngModel" [ngClass]="{ 'is-invalid': f.submitted && email.invalid }" required email>
+                            <div *ngIf="f.submitted && email.invalid" class="invalid-feedback">
+                                <div *ngIf="email.errors.required">Email is required</div>
+                                <div *ngIf="email.errors.email">Email must be a valid email address</div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <input type="password" class="form-control" name="password" placeholder="Password" [(ngModel)]="credentials.password" #password="ngModel" [ngClass]="{ 'is-invalid': f.submitted && password.invalid }" required minlength="6">
+                            <div *ngIf="f.submitted && password.invalid" class="invalid-val">
+                                <div *ngIf="password.errors.required">Password is required</div>
+                                <div *ngIf="password.errors.minlength">Password must be at least 6 characters</div>
+                            </div>
+                            
+                        </div>
+                        <div >
+                            <label style="color: #8d7785;" for="confirmPassword">Select state</label>
+                            <label style="margin-left: 322px;color: #8d7785;" for="confirmPassword">Select city</label>
+                        </div>
+                        <div class="form-group">
+                                
+                            <select [ngModel]="credentials.state" (ngModelChange)="onStateChange($event)" name="state" id="state" #state="ngModel" [ngClass]="{ 'is-invalid': f.submitted &&  state.invalid }" required>
+                                <option value = ''   hidden>Select state</option>
+                                <option [ngValue]="state.id" *ngFor="let state of states">{{state.name}}</option>
+                            </select>
+                            
+                            <select [ngModel]="credentials.city" (ngModelChange)="onCityChange($event)" name="city" id="city" #city="ngModel" [ngClass]="{ 'is-invalid': f.submitted &&  city.invalid }" required style="margin-left: 75px;">
+                                    <option value = ""  hidden>Select city</option>
+                                <option [ngValue]="city.id" *ngFor="let city of cities">{{city.name}}</option>
+                            </select>
+                            
+                            <div *ngIf="f.submitted && state.invalid" class="invalid-val">
+                                    <div *ngIf="state.errors.required">State is required</div>
+                            </div>
+                            <div *ngIf="f.submitted && city.invalid" class="invalid-val">
+                                <div *ngIf="city.errors.required">City is required</div>
+                            </div>     
+                        </div>
+                        
+                        <div class="form-group">
+                                <input class="form-control" type="text" name="phone" placeholder="Your Phone Number"  [(ngModel)]="credentials.phone"  #phone="ngModel" [ngClass]="{ 'is-invalid': f.submitted && phone.invalid }" required>
+                                <div *ngIf="f.submitted && phone.invalid" class="invalid-val">
+                                    <div *ngIf="phone.errors.required">Phone Number is required</div>
+                                </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <input id="dob" name="dob" type="text"  placeholder="Date of Birth" [(ngModel)]="credentials.dob" bsDatepicker #dob="ngModel" [ngClass]="{ 'is-invalid': f.submitted && dob.invalid }" required>
+                            <div *ngIf="f.submitted && dob.invalid" class="invalid-val">
+                                <div *ngIf="dob.errors.required">Date of birth is required</div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <textarea name="address" placeholder="Your Address" [(ngModel)]="credentials.address" #address="ngModel" [ngClass]="{ 'is-invalid': f.submitted && address.invalid }" required></textarea>
+                            <div *ngIf="f.submitted && address.invalid" class="invalid-val" >
+                                <div *ngIf="address.errors.required">Address is required</div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                                <input type="checkbox" name="terms" [ngModel]="credentials.terms" required #terms="ngModel">
+                                <span style="padding: 10px;">I agree to the <a href="javascript:void(0);" (click)="showterms()" id="btToggle">Terms of Use </a>&amp; I am above 21 years. </span>
+                                <div *ngIf="f.submitted && terms.invalid" class="invalid-val"> 
+                                    <div *ngIf="terms.errors.required">Please accept Terms & Conditions.</div>
+                                    
+                               </div> 
+                        </div>
+                        <div style="text-align: center;">
+                                <button  type="submit" class="btn btn-md btn-success regButton ">Register!</button>
+                                <button type="button"class="btn btn-md btn-success regButton" routerLink="/home" routerLinkActive="router-link-active">Back</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        </div>
+    </div>
+    <div *ngIf="show_terms" id="terms_div">
+            <app-terms></app-terms>
+    </div>
+</section>
+

@@ -1,0 +1,86 @@
+import { Component, OnInit } from '@angular/core';
+import { AuthenticationService, TokenPayload } from '../authentication.service';
+import { Router } from '@angular/router';
+import { AuthService } from 'angularx-social-login';
+import { SocialUser } from 'angularx-social-login';
+
+import { GoogleLoginProvider} from 'angularx-social-login';
+
+@Component({
+  selector: 'app-login',
+  templateUrl: './login.component.html',
+  styleUrls: ['./login.component.css']
+
+})
+export class LoginComponent implements OnInit {
+  public show_dialog : boolean = true;
+  public button_name : any = 'Show Login Form!';
+  public errorvar;
+
+  user: SocialUser;
+  credentials: TokenPayload = {
+    id: 0,
+    name: '',
+    email: '',
+    password: '',
+    state: 0,
+    city: 0,
+    dob:'',
+    phone:'',
+    address:'',
+    uname:'',
+    terms: false
+  }
+
+  constructor(public auth: AuthenticationService, private router: Router, private authService: AuthService ) {}
+
+  ngOnInit() {
+    this.authService.authState.subscribe((user) => {
+      this.user = user;
+      console.log(user);
+    });
+  }
+
+  login() {
+    this.auth.login(this.credentials).subscribe(
+      () => {
+        document.getElementById('divshow2').style.display = 'none';
+        this.router.navigateByUrl('#home')
+        
+       
+      },
+      err => {
+        //let errorvar = console.error(err);
+        alert("Invalid Credentials!");
+      }
+    )
+  }
+
+  signInWithGoogle(): void {
+   /* this.authService.signIn(GoogleLoginProvider.PROVIDER_ID).then(
+      x => console.log(x)
+
+    );*/
+
+    this.authService.signIn(GoogleLoginProvider.PROVIDER_ID).then(
+      () => {
+        //alert("Welcome");
+        this.router.navigateByUrl('#home')
+      },
+      err => {
+        console.error(err);
+        alert("Invalid Credentials!");
+      }
+    )
+  }
+
+  signOut(): void {
+    this.authService.signOut();
+  }
+  toggle() {
+    //console.log();
+    document.getElementById('divshow2').style.display = 'none';
+
+  }
+
+}

@@ -1,0 +1,52 @@
+<!--/nav-->
+<div class="header_top">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <button class="navbar-toggler navbar-toggler-right mx-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mx-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" routerLink="/home" routerLinkActive="router-link-active">Home<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link scroll" href="#about">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link scroll" href="#team">Team</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link scroll" routerLink="/league-structure" routerLinkActive="router-link-active">League Structure</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link scroll" routerLink="/blog" routerLinkActive="router-link-active">Blog</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link scroll" href="#contact">Contact Us</a>
+                </li>
+                <li *ngIf="!auth.isLoggedIn()" class="nav-item">
+                    <button (click)="toggle()" id="btToggle" class="nav-login-btn" >Login </button>
+                </li>
+                <li *ngIf="!auth.isLoggedIn()" class="nav-item">
+                        <button routerLink="/register" class="nav-reg-btn" >Register Now </button>
+                    </li>
+                
+                <li *ngIf="auth.isLoggedIn()" class="nav-item">
+                    <button (click)="auth.logout()"  class="nav-login-btn" >Logout </button>
+                </li>
+                <li *ngIf="auth.isLoggedIn()" class="nav-item">
+                    <a class="nav-link" routerLink="">Hello </a>
+                </li>
+                  
+            </ul>
+
+        </div>
+
+    </nav>
+    <div *ngIf="show_dialog" id="divshow2">
+        <app-login></app-login>
+    </div>
+</div>
+<!--//nav-->
