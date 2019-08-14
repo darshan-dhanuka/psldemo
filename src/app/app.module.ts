@@ -4,7 +4,7 @@ import { HttpClientModule } from '@angular/common/http'
 import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { LeagueStructureComponent } from './league-structure/league-structure.component';
+
 import { BlogComponent } from './blog/blog.component';
 import { FaqsComponent } from './faqs/faqs.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'; 
@@ -16,9 +16,24 @@ import { AuthenticationService } from './authentication.service';
 import { AuthGuardService } from './auth-guard.service';
 import { SocialLoginModule } from 'angularx-social-login';
 import { AuthServiceConfig, GoogleLoginProvider  } from 'angularx-social-login';
-import { BsDatepickerModule} from 'ngx-bootstrap/datepicker';
+import { AndhraBulletsComponent } from './andhra-bullets/andhra-bullets.component';
+import { BengaluruWarriorsComponent } from './bengaluru-warriors/bengaluru-warriors.component';
+import { ChennaiThalaivasComponent } from './chennai-thalaivas/chennai-thalaivas.component';
+import { DelhiPentharsComponent } from './delhi-penthars/delhi-penthars.component';
+import { GujratFalconsComponent } from './gujrat-falcons/gujrat-falcons.component';
+import { GoanNutsComponent } from './goan-nuts/goan-nuts.component';
+import { KolkataKingsComponent } from './kolkata-kings/kolkata-kings.component';
+import { MumbaiAnchorsComponent } from './mumbai-anchors/mumbai-anchors.component';
+import { PuneSharksComponent } from './pune-sharks/pune-sharks.component';
+import { PunjabBluffersComponent } from './punjab-bluffers/punjab-bluffers.component';
+import { RajasthanTiltersComponent } from './rajasthan-tilters/rajasthan-tilters.component';
+import { PreviousSeasonsComponent } from './previous-seasons/previous-seasons.component';
+import { Navigation2Component } from './navigation2/navigation2.component';
+
 import { TermsComponent } from './terms/terms.component';
+import { BsDatepickerModule} from 'ngx-bootstrap/datepicker';
 import { ReactiveFormsModule } from '@angular/forms';
+
 const config = new AuthServiceConfig([
   {
     id: GoogleLoginProvider.PROVIDER_ID,
@@ -49,6 +64,20 @@ export function provideConfig() {
     NevigationComponent,
     LoginComponent,
     RegisterComponent,
+    AndhraBulletsComponent,
+    BengaluruWarriorsComponent,
+    ChennaiThalaivasComponent,
+    DelhiPentharsComponent,
+    GujratFalconsComponent,
+    GoanNutsComponent,
+    KolkataKingsComponent,
+    MumbaiAnchorsComponent,
+    PuneSharksComponent,
+    PunjabBluffersComponent,
+    RajasthanTiltersComponent,
+    PreviousSeasonsComponent,
+    Navigation2Component,
+ 
     TermsComponent
   ],
   imports: [
