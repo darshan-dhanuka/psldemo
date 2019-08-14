@@ -875,10 +875,33 @@ h3.heading:after {
 /*-- //contact --*/
 
 
+/*-- //team size --*/
+
+.team-div {
+    padding: 10px;
+}
+
+.team-img {
+    max-width: 50% !important;
+}
+
+
+/*-- //team size --*/
+
+
 /*-- team --*/
 
 .barber-grid1 {
     position: relative;
+    cursor: pointer;
+}
+
+.barber-grid1:hover {
+    -ms-transform: scale(1.5);
+    /* IE 9 */
+    -webkit-transform: scale(1.5);
+    /* Safari 3-8 */
+    transform: scale(1.5);
 }
 
 .barber-grid1:before {
