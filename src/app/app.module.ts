@@ -29,7 +29,7 @@ import { PuneSharksComponent } from './pune-sharks/pune-sharks.component';
 import { PunjabBluffersComponent } from './punjab-bluffers/punjab-bluffers.component';
 import { RajasthanTiltersComponent } from './rajasthan-tilters/rajasthan-tilters.component';
 import { PreviousSeasonsComponent } from './previous-seasons/previous-seasons.component';
-import { Navigation2Component } from './navigation2/navigation2.component';
+
 
 import { TermsComponent } from './terms/terms.component';
 import { BsDatepickerModule} from 'ngx-bootstrap/datepicker';
@@ -67,7 +67,7 @@ export function provideConfig() {
     NevigationComponent,
     LoginComponent,
     RegisterComponent,
-    Navigation2Component,
+   
     AndhraBulletsComponent,
     BengaluruWarriorsComponent,
     ChennaiThalaivasComponent,
