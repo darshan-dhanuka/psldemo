@@ -34,7 +34,9 @@ import { Navigation2Component } from './navigation2/navigation2.component';
 import { TermsComponent } from './terms/terms.component';
 import { BsDatepickerModule} from 'ngx-bootstrap/datepicker';
 import { ReactiveFormsModule } from '@angular/forms';
-
+import { Nev2Component } from './nev2/nev2.component';
+import { AboutComponent } from './about/about.component';
+import { MediaComponent } from './media/media.component';
 const config = new AuthServiceConfig([
   {
     id: GoogleLoginProvider.PROVIDER_ID,
@@ -76,10 +78,10 @@ export function provideConfig() {
     PuneSharksComponent,
     PunjabBluffersComponent,
     RajasthanTiltersComponent,
-    PreviousSeasonsComponent,
-    Navigation2Component,
- 
-    TermsComponent
+    TermsComponent,
+    Nev2Component,
+    AboutComponent,
+    MediaComponent
   ],
   imports: [
     BrowserModule,

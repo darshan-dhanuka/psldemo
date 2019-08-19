@@ -16,8 +16,8 @@ import { MumbaiAnchorsComponent } from './mumbai-anchors/mumbai-anchors.componen
 import { PuneSharksComponent } from './pune-sharks/pune-sharks.component';
 import { PunjabBluffersComponent } from './punjab-bluffers/punjab-bluffers.component';
 import { RajasthanTiltersComponent } from './rajasthan-tilters/rajasthan-tilters.component';
-
-
+import { AboutComponent } from './about/about.component';
+import { MediaComponent } from './media/media.component';
 const routes: Routes = [
 {path: '', redirectTo: '/home', pathMatch: 'full'},
 {path: 'home' , component: HomeComponent},
@@ -36,6 +36,8 @@ const routes: Routes = [
 {path: 'pune-sharks', component: PuneSharksComponent},
 {path: 'punjab-bluffers', component: PunjabBluffersComponent},
 {path: 'rajasthan-tilters', component: RajasthanTiltersComponent},
+{path: 'about', component: AboutComponent},
+{path: 'media', component: MediaComponent},
 {path: 'faqs', component: FaqsComponent}
 
 
