@@ -1,6 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 
- @import '../node_modules/ngx-bootstrap/datepicker/bs-datepicker.css';
+@import '../node_modules/ngx-bootstrap/datepicker/bs-datepicker.css';
+
 /*--
 Author: W3layouts
 Author URL: http://w3layouts.com
@@ -64,8 +65,16 @@ img {
     width: 100%;
 }
 
+.logo {
+    margin-top: 50px;
+}
+
 
 /*-- header --*/
+
+.navi {
+    margin: -15px;
+}
 
 .top-bar_sub {
     position: absolute;
@@ -129,18 +138,21 @@ li.nav-item {
     text-decoration: line-through;
 }
 
-.header_top{
+.header_top {
     overflow: hidden;
     position: fixed;
     top: 0;
     width: 100%;
+    height: 55px;
     background: #000000a6;
 }
-.top-forms
-{
+
+.top-forms {
     position: absolute;
     z-index: 9;
 }
+
+
 /*-- //header --*/
 
 
@@ -1117,38 +1129,48 @@ span.price {
 
 /*-- //pricing --*/
 
+
 /*----login------------*/
+
 .login-form {
     width: 340px;
     margin: 30px auto;
 }
+
 .login-form form {
     margin-bottom: 15px;
     background: #f7f7f7;
     box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
     padding: 30px;
 }
+
 .login-form h2 {
     margin: 0 0 15px;
 }
+
 .login-form .hint-text {
     color: #777;
     padding-bottom: 15px;
     text-align: center;
 }
-.form-control, .btn {
+
+.form-control,
+.btn {
     min-height: 38px;
     border-radius: 2px;
 }
-.login-btn {        
+
+.login-btn {
     font-size: 15px;
     font-weight: bold;
 }
+
 .or-seperator {
     margin: 20px 0 10px;
     text-align: center;
     border-top: 1px solid #ccc;
 }
+
 .or-seperator i {
     padding: 0 10px;
     background: #f7f7f7;
@@ -1156,25 +1178,31 @@ span.price {
     top: -11px;
     z-index: 1;
 }
+
 .social-btn .btn {
     margin: 10px 0;
     font-size: 15px;
-    text-align: left; 
-    line-height: 24px;       
+    text-align: left;
+    line-height: 24px;
 }
+
 .social-btn .btn i {
     float: left;
-    margin: 4px 15px  0 5px;
+    margin: 4px 15px 0 5px;
     min-width: 15px;
 }
-.input-group-addon .fa{
+
+.input-group-addon .fa {
     font-size: 18px;
 }
+
+
 /*------------login------------------*/
 
+
 /*-- //nav login button --*/
-.nav-login-btn
-{
+
+.nav-login-btn {
     background: none;
     border: 2px solid #68d6c5;
     border-radius: 20px;
@@ -1189,8 +1217,7 @@ span.price {
     text-align: center;
 }
 
-.nav-reg-btn
-{
+.nav-reg-btn {
     background: red;
     border: 2px solid red;
     border-radius: 20px;
@@ -1204,9 +1231,13 @@ span.price {
     padding: 8px 20px;
     text-align: center;
 }
+
+
 /*-- //nav login button --*/
 
+
 /*-- Registration --*/
+
 .regButton {
     /*background-color: #4CAF50;
     Green */
@@ -1222,8 +1253,6 @@ span.price {
     border-radius: 40px;
     outline: none;
     padding: 20px 0;
-    
-   
     letter-spacing: 2px;
     text-transform: uppercase;
     -webkit-transition: 0.5s all;
@@ -1237,8 +1266,11 @@ span.price {
     -webkit-box-shadow: 4px 4px rgba(187, 188, 189, 0.5);
     -o-box-shadow: 4px 4px rgba(187, 188, 189, 0.5);
     -moz-box-shadow: 4px 4px rgba(187, 188, 189, 0.5);
-    }
+}
+
+
 /*-- Registration --*/
+
 
 /*-- //close-popup --*/
 
@@ -1250,19 +1282,22 @@ span.price {
     cursor: pointer;
 }
 
-.login-close{
+.login-close {
     color: #dc3545;
-}  
-.invalid-val  
-{
+}
+
+.invalid-val {
     font-size: 80%;
     color: #dc3545;
 }
+
+
 /*-- //close-popup --*/
 
 
 /*-- //terms-popup --*/
-.style-terms{
+
+.style-terms {
     border-radius: 11px;
     /* background: url(/assets/images/banner6.png) no-repeat 0px 0px; */
     padding: 15px;
@@ -1270,15 +1305,19 @@ span.price {
     background: #f1f1f1;
     padding: 30px;
     position: absolute;
-  top: 0; bottom: 30px; left: 30px; right: 30px;
-  overflow: auto;
+    top: 0;
+    bottom: 30px;
+    left: 30px;
+    right: 30px;
+    overflow: auto;
 }
 
-.terms-close
-{
+.terms-close {
     color: #dc3545;
     position: fixed;
 }
+
+
 /*-- //terms-popup --*/
 
 
@@ -1327,7 +1366,6 @@ span.price {
 .contact_grid_right input[type="text"],
 .contact_grid_right input[type="email"],
 .contact_grid_right input[type="password"],
-
 .contact_grid_right textarea {
     outline: none;
     padding: 15px 15px;
@@ -1344,11 +1382,10 @@ span.price {
     border-radius: 0;
 }
 
-.contact_grid_right select{
+.contact_grid_right select {
     outline: none;
     padding: 15px 15px;
     font-size: 14px;
-   
     background: transparent;
     width: 45%;
     display: inline-block;
@@ -1360,11 +1397,11 @@ span.price {
     -moz-box-shadow: 4px 4px rgba(187, 188, 189, 0.5);
     border-radius: 0;
 }
-.contact_grid_right select:focus {
-   
-}
-  /* with the :focus here, we would show grey when not using the element */
-  
+
+.contact_grid_right select:focus {}
+
+
+/* with the :focus here, we would show grey when not using the element */
 
 .contact_grid_right textarea {
     min-height: 150px;
@@ -1381,7 +1418,6 @@ span.price {
     /* Chrome/Opera/Safari */
     color: #8d7785;
 }
-
 
 .contact_left_grid ::-moz-placeholder {
     /* Firefox 19+ */
@@ -1857,4 +1893,38 @@ span.price {
 
 
 /*-- //Responsive Design --*/
+
+
+/*-- //Responsive Design --*/
+
+@media(max-width: 375px) {
+    .about-grid1 h3 {
+        font-size: 18px;
+        letter-spacing: 0px;
+    }
+    .contact_left_grid {
+        width: 90%;
+    }
+    .bg1,
+    .bg2,
+    .bg3,
+    .bg4 {
+        height: 105vw;
+    }
+}
+
+@media(max-width: 320px) {
+    .nbs-flexisel-nav-left,
+    .nbs-flexisel-nav-right {
+        top: 83% !important;
+    }
+    .wthree_testimonials_grid {
+        padding: 1em 1em 1em;
+    }
+}
+
+
+/*-- //Responsive Design --*/
+
+
 /*-- //Responsive Design --*/
