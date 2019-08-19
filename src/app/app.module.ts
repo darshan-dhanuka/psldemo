@@ -62,11 +62,12 @@ export function provideConfig() {
     LeagueStructureComponent,
     BlogComponent,
     FaqsComponent,
-
+    PreviousSeasonsComponent,
     HomeComponent,
     NevigationComponent,
     LoginComponent,
     RegisterComponent,
+    Navigation2Component,
     AndhraBulletsComponent,
     BengaluruWarriorsComponent,
     ChennaiThalaivasComponent,
