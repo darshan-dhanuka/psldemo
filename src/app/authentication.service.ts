@@ -80,7 +80,7 @@ export class AuthenticationService {
   }
 
   public register(user: TokenPayload): Observable<any> {
-      console.log(user);
+      //console.log(user);
       return this.http.post(`http://localhost/register/public/api/register`, user, {
         headers: {'Content-Type': 'application/json'}
       })
@@ -140,6 +140,19 @@ export class AuthenticationService {
   );
 }
 
+ public sociallogin(user): Observable<any> {
+ 
+   //console.log("statedid====="+stateId)
+  // return this.http.post('http://localhost/register/public/api/social/',
+  //  { headers: {'Content-Type': 'application/json'}
+  // }).pipe(
+  //  catchError(this.handleError)
+  //);
+
+  return this.http.post(`http://localhost/register/public/api/social`, user, {
+        headers: {'Content-Type': 'application/json'}
+      });
+}
 
 private handleError(error: HttpErrorResponse) {
   if (error.error instanceof ErrorEvent) {

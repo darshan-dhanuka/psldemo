@@ -37,7 +37,7 @@ export class LoginComponent implements OnInit {
   ngOnInit() {
     this.authService.authState.subscribe((user) => {
       this.user = user;
-      console.log(user);
+      //console.log(user);
     });
   }
 
@@ -65,7 +65,7 @@ export class LoginComponent implements OnInit {
     this.authService.signIn(GoogleLoginProvider.PROVIDER_ID).then(
       () => {
         //alert("Welcome");
-        this.router.navigateByUrl('#home')
+        this.socialsignin(this.user);
       },
       err => {
         console.error(err);
@@ -73,6 +73,25 @@ export class LoginComponent implements OnInit {
       }
     )
   }
+
+  socialsignin(user)
+  {
+    //console.log(user.email);
+    this.auth.sociallogin(user).subscribe(
+      () => {
+        document.getElementById('divshow2').style.display = 'none';
+        this.router.navigateByUrl('#home')
+        
+       
+      },
+      err => {
+        console.error(err);
+      }
+    );
+  }
+
+  
+  
 
   signOut(): void {
     this.authService.signOut();
