@@ -88,15 +88,16 @@
                                 <div *ngIf="f.submitted && terms.invalid" class="invalid-val"> 
                                     <div *ngIf="terms.errors.required">Please accept Terms & Conditions.</div>
                                     
-                               </div> 
+                                </div>
+                            </div>
+                            <div style="text-align: center;">
+                                <button type="submit" class="btn btn-md btn-success regButton ">Register!</button>
+
+                            </div>
                         </div>
-                        <div style="text-align: center;">
-                                <button  type="submit" class="btn btn-md btn-success regButton ">Register!</button>
-                               
-                    </div>
-                </form>
+                    </form>
+                </div>
             </div>
-        </div>
         </div>
     </div>
     <div *ngIf="show_terms" id="terms_div">
