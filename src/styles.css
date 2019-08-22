@@ -1329,6 +1329,8 @@ span.price {
     background-size: cover;
     background: #f1f1f1;
     padding: 30px;
+    overflow-y: auto;
+    height: 580px;
 }
 
 .style-login h1 {
