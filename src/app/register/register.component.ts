@@ -3,6 +3,7 @@ import { Router } from "@angular/router";
 import { Component,OnInit } from '@angular/core';
 
 @Component({
+	 selector: 'app-register',
   templateUrl: "./register.component.html"
 })
 export class RegisterComponent implements OnInit {
@@ -11,7 +12,7 @@ export class RegisterComponent implements OnInit {
   cities:any[];
   htmlStr:string;
   public show_terms : boolean = false;
-
+  public show_dialog : boolean = true;
   credentials: TokenPayload = {
     id: 0,
     uname:"",
@@ -54,6 +55,11 @@ export class RegisterComponent implements OnInit {
         //console.log('oops', error) 
       }
     );
+  }
+
+  toggle() {
+    //console.log();
+    document.getElementById('divreg').style.display = 'none';
   }
 
   showterms() {

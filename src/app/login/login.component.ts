@@ -14,6 +14,7 @@ import { GoogleLoginProvider} from 'angularx-social-login';
 })
 export class LoginComponent implements OnInit {
   public show_dialog : boolean = true;
+  public show_reg : boolean = false;
   public button_name : any = 'Show Login Form!';
   public errorvar;
 
@@ -100,6 +101,12 @@ export class LoginComponent implements OnInit {
     //console.log();
     document.getElementById('divshow2').style.display = 'none';
 
+  }
+
+  togglereg() {
+    document.getElementById('divshow2').style.display = 'none';
+    document.getElementById('divreg').style.display = 'block';
+    
   }
 
 }

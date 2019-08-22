@@ -36,7 +36,7 @@
                         <button (click)="toggle()" id="btToggle" class="nav-login-btn">Login </button>
                     </li>
                     <li *ngIf="!auth.isLoggedIn() && !user" class="nav-item">
-                        <button routerLink="/register" class="nav-reg-btn">Register Now </button>
+                        <button (click)="togglereg()" class="nav-reg-btn" >Register Now </button>
                     </li>
 
 
@@ -55,8 +55,11 @@
         </div>
 
     </nav>
-    <div *ngIf="show_dialog" id="divshow2">
+    <div style="display:none" id="divshow2">
         <app-login></app-login>
+    </div>
+	<div style="display:none" id="divreg">
+        <app-register></app-register>
     </div>
 </div>
 <!--//nav-->

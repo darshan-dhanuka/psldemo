@@ -9,6 +9,7 @@ import { SocialUser } from 'angularx-social-login';
 })
 export class NevigationComponent implements OnInit {
   public show_dialog : boolean = false;
+  public show_reg : boolean = false;
   public button_name : any = 'Show Login Form!';
   user: SocialUser;
   details: UserDetails;
@@ -30,17 +31,13 @@ export class NevigationComponent implements OnInit {
   }
 
   toggle() {
-    this.show_dialog = !this.show_dialog;
     document.getElementById('divshow2').style.display = 'block';
-    this.show_dialog = !this.show_dialog;
-
-    // CHANGE THE TEXT OF THE BUTTON.
-    if(this.show_dialog)
-      this.button_name = "Hide Login Form!";
-    else
-      this.button_name = "Show Login Form!";
   }
 
+  togglereg() {
+    document.getElementById('divreg').style.display = 'block';
+  }
+  
   signOut(): void {
     this.authService.signOut();
   }

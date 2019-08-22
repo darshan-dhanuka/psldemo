@@ -1,13 +1,19 @@
-<section>
-    <app-nev2></app-nev2>
-    <div>
-        <div class="container py-lg-3">
-                <div class="col-md-12 mt-5 mx-auto">
-            <div class="heading text-center">
-                <h3 class="heading mb-sm-5 mb-3 text-uppercase">Register</h3>
+<div class="container-fluid" style="
+position: fixed;
+top: 0;
+bottom: 0;
+left: 0;
+right: 0;
+background: rgba(90, 90, 90, 0.5);
+z-index: 9999;
+width:100% !important">
+    <div class="row">
+        <div class="col-md-6 mt-5 mx-auto style-login">
+            <div class="popup-header">
+                <div class="close-popup"><a href="javascript: void(0)"><i class="fa fa-window-close login-close" aria-hidden="true" (click)="toggle()"></i></a></div>
             </div>
-            <div class="contact_grid_right">
-                <form name="form" (ngSubmit)="f.form.valid && register()" #f="ngForm" novalidate>
+            <h2 class="text-center">Register</h2>
+            <form name="form" (ngSubmit)="f.form.valid && register()" #f="ngForm" novalidate >
                     <div class="contact_left_grid">
                         <div id="scrollId" style="color: #dc3545;" [innerHTML]="htmlStr">
                         </div>
@@ -39,18 +45,24 @@
                             </div>
                             
                         </div>
+                        <div class="form-group">
+                            <input class="form-control" id="dob" name="dob" type="text"  placeholder="Date of Birth" [(ngModel)]="credentials.dob" bsDatepicker #dob="ngModel" [ngClass]="{ 'is-invalid': f.submitted && dob.invalid }" required>
+                            <div *ngIf="f.submitted && dob.invalid" class="invalid-val">
+                                <div *ngIf="dob.errors.required">Date of birth is required</div>
+                            </div>
+                        </div>
                         <div >
-                            <label style="color: #8d7785;" for="confirmPassword">Select state</label>
-                            <label style="margin-left: 322px;color: #8d7785;" for="confirmPassword">Select city</label>
+                            <label style="color: #8d7785;" >Select state</label>
+                            <label style="margin-left: 220px;color: #8d7785;">Select city</label>
                         </div>
                         <div class="form-group">
                                 
-                            <select [ngModel]="credentials.state" (ngModelChange)="onStateChange($event)" name="state" id="state" #state="ngModel" [ngClass]="{ 'is-invalid': f.submitted &&  state.invalid }" required>
+                            <select [ngModel]="credentials.state" (ngModelChange)="onStateChange($event)" name="state" id="state" #state="ngModel" [ngClass]="{ 'is-invalid': f.submitted &&  state.invalid }" required style="padding: 0.2rem 0.5rem;">
                                 <option value = ''   hidden>Select state</option>
                                 <option [ngValue]="state.id" *ngFor="let state of states">{{state.name}}</option>
                             </select>
                             
-                            <select [ngModel]="credentials.city" (ngModelChange)="onCityChange($event)" name="city" id="city" #city="ngModel" [ngClass]="{ 'is-invalid': f.submitted &&  city.invalid }" required style="margin-left: 75px;">
+                            <select [ngModel]="credentials.city" (ngModelChange)="onCityChange($event)" name="city" id="city" #city="ngModel" [ngClass]="{ 'is-invalid': f.submitted &&  city.invalid }" required style="padding: 0.2rem 0.5rem;margin-left: 75px;width: 43%;">
                                     <option value = ""  hidden>Select city</option>
                                 <option [ngValue]="city.id" *ngFor="let city of cities">{{city.name}}</option>
                             </select>
@@ -70,38 +82,33 @@
                                 </div>
                         </div>
                         
-                        <div class="form-group">
-                            <input id="dob" name="dob" type="text"  placeholder="Date of Birth" [(ngModel)]="credentials.dob" bsDatepicker #dob="ngModel" [ngClass]="{ 'is-invalid': f.submitted && dob.invalid }" required>
-                            <div *ngIf="f.submitted && dob.invalid" class="invalid-val">
-                                <div *ngIf="dob.errors.required">Date of birth is required</div>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <textarea name="address" placeholder="Your Address" [(ngModel)]="credentials.address" #address="ngModel" [ngClass]="{ 'is-invalid': f.submitted && address.invalid }" required></textarea>
+                        
+                        <!--div class="form-group">
+                            <textarea style="width:100%" name="address" placeholder="Your Address" [(ngModel)]="credentials.address" #address="ngModel" [ngClass]="{ 'is-invalid': f.submitted && address.invalid }" required></textarea>
                             <div *ngIf="f.submitted && address.invalid" class="invalid-val" >
                                 <div *ngIf="address.errors.required">Address is required</div>
                             </div>
-                        </div>
+                        </div-->
                         <div class="form-group">
                                 <input type="checkbox" name="terms" [ngModel]="credentials.terms" required #terms="ngModel">
                                 <span style="padding: 10px;">I agree to the <a href="javascript:void(0);" (click)="showterms()" id="btToggle">Terms of Use </a>&amp; I am above 21 years. </span>
                                 <div *ngIf="f.submitted && terms.invalid" class="invalid-val"> 
                                     <div *ngIf="terms.errors.required">Please accept Terms & Conditions.</div>
                                     
-                                </div>
-                            </div>
-                            <div style="text-align: center;">
-                                <button type="submit" class="btn btn-md btn-success regButton ">Register!</button>
-
-                            </div>
+                               </div> 
                         </div>
-                    </form>
-                </div>
-            </div>
+                        <div style="text-align: center;">
+                                <button  type="submit" class="btn btn-md btn-success regButton ">Register!</button>
+                        </div>
+                    </div>
+                </form>
+            
+            		
+            
         </div>
+
     </div>
-    <div *ngIf="show_terms" id="terms_div">
+	<div *ngIf="show_terms" id="terms_div">
             <app-terms></app-terms>
     </div>
-</section>
-
+</div>
