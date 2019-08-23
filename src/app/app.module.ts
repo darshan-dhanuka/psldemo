@@ -37,6 +37,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { Nev2Component } from './nev2/nev2.component';
 import { AboutComponent } from './about/about.component';
 import { MediaComponent } from './media/media.component';
+import { TestimonialsComponent } from './testimonials/testimonials.component';
 const config = new AuthServiceConfig([
   {
     id: GoogleLoginProvider.PROVIDER_ID,
@@ -82,7 +83,8 @@ export function provideConfig() {
     TermsComponent,
     Nev2Component,
     AboutComponent,
-    MediaComponent
+    MediaComponent,
+    TestimonialsComponent
   ],
   imports: [
     BrowserModule,
