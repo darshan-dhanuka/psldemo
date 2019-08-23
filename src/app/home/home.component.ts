@@ -19,4 +19,9 @@ export class HomeComponent implements OnInit {
 load(){
   window.location.reload();
 }
+
+
+  togglereg() {
+    document.getElementById('divreg').style.display = 'block';
+  }
 }

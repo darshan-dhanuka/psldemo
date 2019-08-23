@@ -35,9 +35,9 @@
                     <li *ngIf="!auth.isLoggedIn() && !user" class="nav-item">
                         <button (click)="toggle()" id="btToggle" class="nav-login-btn">Login </button>
                     </li>
-                    <li *ngIf="!auth.isLoggedIn() && !user" class="nav-item">
+                    <!--li *ngIf="!auth.isLoggedIn() && !user" class="nav-item">
                         <button (click)="togglereg()" class="nav-reg-btn" >Register Now </button>
-                    </li>
+                    </li-->
 
 
                     <li *ngIf="auth.isLoggedIn()" class="nav-item">

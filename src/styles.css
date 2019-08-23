@@ -1247,8 +1247,8 @@ span.price {
 }
 
 .nav-reg-btn {
-    background: red;
-    border: 2px solid red;
+    background: #018e3f;
+    border: 2px solid #42c539;
     border-radius: 20px;
     color: white;
     cursor: pointer;
@@ -1347,6 +1347,51 @@ span.price {
 
 
 /*-- //terms-popup --*/
+ /*-- floating icon --*/ 
+
+#mySidenav a {
+    position: fixed;
+    right: 11px;
+    transition: 0.3s;
+    padding: 15px;
+   
+    text-decoration: none;
+    font-size: 20px;
+    color: white;
+    border-radius: 15px;
+    
+  }
+
+  .levitate{
+    animation: levitate 3s ease-out infinite normal;
+  }
+  @keyframes levitate{
+      0%{
+          transform: scale(0.9)
+      }
+      25%{
+        transform: scale(1)
+        }
+    60%{
+            transform: scale(0.9)
+        }
+        100%{
+            transform: scale(0.9)
+        }
+  }
+
+  #mySidenav a:hover {
+    /*right: 0;
+    -webkit-transform: rotate(360deg); /* Safari */
+    /*transform: rotate(360deg);*/
+  }
+  
+  #reg {
+    z-index: 1000;
+    top: 170px;
+  }
+  
+ /*-- floating icon --*/				
 
 
 /*--//login--*/
@@ -1440,7 +1485,7 @@ span.price {
 }
 
 .contact_left_grid {
-    width: 70%;
+    width: 90%;
     margin: 0 auto;
 }
 
