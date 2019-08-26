@@ -7,7 +7,7 @@ import { AppComponent } from './app.component';
 
 import { BlogComponent } from './blog/blog.component';
 import { FaqsComponent } from './faqs/faqs.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations'; 
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HomeComponent } from './home/home.component';
 import { NevigationComponent } from './nevigation/nevigation.component';
 import { LeagueStructureComponent } from './league-structure/league-structure.component';
@@ -68,7 +68,7 @@ export function provideConfig() {
     NevigationComponent,
     LoginComponent,
     RegisterComponent,
-   
+
     AndhraBulletsComponent,
     BengaluruWarriorsComponent,
     ChennaiThalaivasComponent,
