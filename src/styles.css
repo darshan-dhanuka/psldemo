@@ -819,13 +819,13 @@ h3.heading:after {
 
 .nbs-flexisel-nav-left {
     left: 0%;
-    top: 60% !important;
+    top: 45% !important;
     background: url(/assets/images/left.png) no-repeat no-repeat 3px 6px transparent;
 }
 
 .nbs-flexisel-nav-right {
     right: 0%;
-    top: 60% !important;
+    top: 45% !important;
     background: url(/assets/images/right.png) no-repeat no-repeat 3px 6px transparent;
 }
 
@@ -975,6 +975,7 @@ h3.heading:after {
 
 /*-- team --*/
 
+
 /*-- Testimonials --*/
 
 .testimonials {
@@ -1038,9 +1039,12 @@ h3.heading:after {
     color: #212121;
 }
 
+
 /*-- Testimonials --*/
 
+
 /*-- footer --*/
+
 
 /*-- footer --*/
 
@@ -1057,7 +1061,7 @@ h3.heading:after {
 .footer-container {
     background: black;
     width: 100%;
-   /*height: 40px;
+    /*height: 40px;
     margin-bottom: -30px;*/
     text-align: center;
 }
@@ -1128,6 +1132,7 @@ h3.heading:after {
 .copyright a:hover {
     color: #00a98f;
 }
+
 
 /*-- //footer --*/
 
@@ -1347,51 +1352,53 @@ span.price {
 
 
 /*-- //terms-popup --*/
- /*-- floating icon --*/ 
+
+
+/*-- floating icon --*/
 
 #mySidenav a {
     position: fixed;
     right: 11px;
     transition: 0.3s;
     padding: 15px;
-   
     text-decoration: none;
     font-size: 20px;
     color: white;
     border-radius: 15px;
-    
-  }
+}
 
-  .levitate{
+.levitate {
     animation: levitate 3s ease-out infinite normal;
-  }
-  @keyframes levitate{
-      0%{
-          transform: scale(0.9)
-      }
-      25%{
-        transform: scale(1)
-        }
-    60%{
-            transform: scale(0.9)
-        }
-        100%{
-            transform: scale(0.9)
-        }
-  }
+}
 
-  #mySidenav a:hover {
+@keyframes levitate {
+    0% {
+        transform: scale(0.9)
+    }
+    25% {
+        transform: scale(1)
+    }
+    60% {
+        transform: scale(0.9)
+    }
+    100% {
+        transform: scale(0.9)
+    }
+}
+
+#mySidenav a:hover {
     /*right: 0;
     -webkit-transform: rotate(360deg); /* Safari */
     /*transform: rotate(360deg);*/
-  }
-  
-  #reg {
+}
+
+#reg {
     z-index: 1000;
     top: 170px;
-  }
-  
- /*-- floating icon --*/				
+}
+
+
+/*-- floating icon --*/
 
 
 /*--//login--*/
